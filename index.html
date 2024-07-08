@@ -1,0 +1,21 @@
+# User credentials (can be stored in a database in a real application)
+users = {
+    'user1': 'password1',
+    'user2': 'password2',
+    'user3': 'password3'
+}
+
+def login(username, password):
+    if username in users and users[username] == password:
+        return True
+    else:
+        return False
+
+# Example usage:
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+if login(username, password):
+    print("Login successful!")
+else:
+    print("Login failed. Please check your username and password.")
